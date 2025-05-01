@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Server</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        {{>header title=title}}
+    </header>
+    <main>
+        <section id="content" class="content">
+            <p>Welcome to {{name}}</p>                
+            <p>Use this to site to get your weather.</p>
+        </section>
+        <section id="weather" class="weather">
+            <form id="weather-form" action="/weather" method="GET">
+                <label for="location">Enter a location:</label>
+                <input type="text" id="address" name="address" required>
+                <button type="submit">Get Weather</button>
+            </form>
+            <div id="weather-result" class="weather-result" >
+                    <h2>Weather in <span id="location" class="location"> </span></h2>
+                    <h2>Temperature: <span id="temperature" class="temperature"> </span></h2>
+                    <h2>Condition: <span id="precip" class="precip"> </span></h2>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        {{>footer name=name}}
+    </footer>
+</html>

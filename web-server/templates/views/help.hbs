@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Server</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        {{>header title=title}}
+    </header>
+    <main>
+        <section id="content">
+            <p>This is a {{name}}.</p>
+            <p>It is a simple web server that serves static files and dynamic content.</p>
+            <p>{{helpText}}</p>
+        </section>
+    </main>
+
+    <footer>
+        {{>footer name=name}}
+    </footer>
+</html>
