@@ -1,0 +1,6 @@
+/task-manager
+/task-manager/.env
+/task-manager/node_modules
+/task-manager/config
+/notes-app/node_modules
+/web-server/node_modules
